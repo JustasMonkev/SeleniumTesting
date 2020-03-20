@@ -29,7 +29,6 @@ public class Guru99RadioandCheckboxes extends BasePage {
 	public Guru99RadioandCheckboxes selectAllCheckBoxes() {
 		if ((!CheckBox1.isSelected()) || (!CheckBox2.isSelected()) || (!CheckBox3.isSelected())) {
 			CheckBox1.click();
-			driver.manage().timeouts().implicitlyWait(2,TimeUnit.SECONDS);
 			CheckBox2.click();
 			CheckBox3.click();
 		}

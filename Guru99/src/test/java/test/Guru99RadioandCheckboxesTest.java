@@ -1,6 +1,7 @@
 package test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -35,14 +36,14 @@ public class Guru99RadioandCheckboxesTest extends BaseTest {
 		WebElement CheckBox1 = driver.findElement(By.id("vfb-6-0"));
 		WebElement CheckBox2 = driver.findElement(By.id("vfb-6-1"));
 		WebElement CheckBox3 = driver.findElement(By.id("vfb-6-2"));
-		assertEquals(true, CheckBox1.isSelected());
-		assertEquals(true, CheckBox2.isSelected());
-		assertEquals(true, CheckBox3.isSelected());
+		assertTrue(CheckBox1.isSelected());
+		assertTrue(CheckBox2.isSelected());
+		assertTrue(CheckBox3.isSelected());
 	}
 
 	@Test
 	public void checkifSecondRadionisSelected() {
 		WebElement secondRadio = driver.findElement(By.id("vfb-7-2"));
-		assertEquals(true, secondRadio.isSelected());
+		assertTrue(secondRadio.isSelected());
 	}
 }
