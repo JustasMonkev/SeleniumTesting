@@ -8,7 +8,7 @@ public class GuruHomePage99 extends BasePage {
     @FindBy(xpath = "//li[@class=\"dropdown\"][1]")
     private WebElement selenium;
     @FindBy(xpath = "//li[@class='dropdown open']//ul[@class='dropdown-menu']//li[1]")
-    private WebElement FlashMovieDemo;
+    private WebElement flashMovieDemo;
     @FindBy(xpath = "//li[@class='dropdown open']//ul[@class='dropdown-menu']//li[2]")
     private WebElement checkboxesandRadios;
     @FindBy(xpath = "//li[@class='dropdown open']//li[4]")
@@ -18,7 +18,9 @@ public class GuruHomePage99 extends BasePage {
     @FindBy(xpath = "//ul[@class = \"nav navbar-nav\"]//li[6]")
     private WebElement blockLevelTag;
     @FindBy(xpath = "//ul[@class = \"nav navbar-nav\"]//li[7]")
-    private WebElement DeleteCustomerForm;
+    private WebElement deleteCustomerForm;
+    @FindBy(xpath = "//li[@class  = \"dropdown open\"]//li[8]")
+    private WebElement yahoo;
     @FindBy(xpath = "//nav[@class = \"navbar navbar-default\"]//ul[1]//li[3]")
     private WebElement insuranceProject;
     @FindBy(xpath = "//nav[@class = \"navbar navbar-default\"]//ul[1]//li[4]")
@@ -52,7 +54,7 @@ public class GuruHomePage99 extends BasePage {
     }
 
     public GuruHomePage99 clickFlashMovieDemo() {
-        FlashMovieDemo.click();
+        flashMovieDemo.click();
         return this;
     }
 
@@ -77,8 +79,13 @@ public class GuruHomePage99 extends BasePage {
     }
 
     public GuruHomePage99 clickDeleteCustomerForm() {
-		DeleteCustomerForm.click();
-    	return this;
+        deleteCustomerForm.click();
+        return this;
+    }
+
+    public GuruHomePage99 clickYahoo() {
+        yahoo.click();
+        return this;
     }
 
     public GuruHomePage99 clickInsuranceProjectLink() {
