@@ -13,14 +13,14 @@ public class GuruYahoo99Test extends BaseTest {
     GuruHomePage99 objGuruHomePage99 = new GuruHomePage99(driver);
 
     @Test
-    @Order(0)
+    @Order(1)
     public void testPathToYahoo() {
         objGuruHomePage99.openDropMenu().clickYahoo();
         assertEquals("Selenium WebDriver Test", objGuruYahoo.getTitle());
     }
 
     @Test
-    @Order(1)
+    @Order(2)
     public void testFirstSlide() throws InterruptedException {
         objGuruYahoo.clickFirstSlide();
         Thread.sleep(2000);
@@ -29,7 +29,7 @@ public class GuruYahoo99Test extends BaseTest {
     }
 
     @Test
-    @Order(2)
+    @Order(3)
     public void testSecondSlide() throws InterruptedException {
         objGuruYahoo.clickSecondSlide();
         Thread.sleep(2000);
