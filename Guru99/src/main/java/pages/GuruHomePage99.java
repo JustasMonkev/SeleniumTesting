@@ -23,6 +23,8 @@ public class GuruHomePage99 extends BasePage {
     private WebElement yahoo;
     @FindBy(xpath = "//li[@class='dropdown open']//li[9]")
     private WebElement toolTip;
+    @FindBy(xpath = "//li[@class='dropdown open']//li[10]")
+    private WebElement fileUpload;
     @FindBy(xpath = "//nav[@class = \"navbar navbar-default\"]//ul[1]//li[3]")
     private WebElement insuranceProject;
     @FindBy(xpath = "//nav[@class = \"navbar navbar-default\"]//ul[1]//li[4]")
@@ -92,6 +94,11 @@ public class GuruHomePage99 extends BasePage {
 
     public GuruHomePage99 clickToolTip() {
         toolTip.click();
+        return this;
+    }
+
+    public GuruHomePage99 clickFileUpload() {
+        fileUpload.click();
         return this;
     }
 

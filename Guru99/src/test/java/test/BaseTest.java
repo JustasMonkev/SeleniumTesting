@@ -4,6 +4,7 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public abstract class BaseTest {
 	protected static WebDriver driver;
@@ -17,8 +18,8 @@ public abstract class BaseTest {
 		driver.manage().window().maximize();
 	}
 
-	@AfterClass
-	public static void tearDown() {
-		driver.quit();
-	}
+//	@AfterClass
+//	public static void tearDown() {
+//		driver.quit();
+//	}
 }
