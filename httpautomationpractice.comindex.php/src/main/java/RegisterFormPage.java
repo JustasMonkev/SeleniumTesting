@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -15,6 +17,8 @@ public class RegisterFormPage extends BasePage {
     private WebElement clickSumbitButton;
     @FindBy(xpath = "//ul[@class = \"myaccount-link-list\"]//li[4]")
     private WebElement clickAccountInfo;
+    @FindBy(xpath = "//div[@class=\"nav\"]//div[@class=\"row\"]")
+    private List<WebElement> navItems;
 
     public RegisterFormPage(WebDriver driver) {
         super(driver);
@@ -78,8 +82,17 @@ public class RegisterFormPage extends BasePage {
         driver.findElement(By.id("alias")).sendKeys("Road Flat 5");
         driver.findElement(By.id("submitAccount")).click();
     }
+
     public RegisterFormPage clickOnAccountInfo() {
         clickAccountInfo.click();
         return this;
+    }
+
+    public List<String> getMenuText() {
+        List<String> list = new ArrayList<>();
+        for (WebElement text : navItems) {
+            list.add(text.getText());
+        }
+        return list;
     }
 }
