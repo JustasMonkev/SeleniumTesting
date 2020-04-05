@@ -15,8 +15,8 @@ public abstract class BaseTest {
         driver.get("http://automationpractice.com/index.php");
 
     }
-//    @AfterClass
-//    public static void closeChrome() {
-//        driver.quit();
-//    }
+    @AfterClass
+    public static void closeChrome() {
+        driver.quit();
+    }
 }
