@@ -18,6 +18,12 @@ public class ShopPage extends BasePage {
     private WebElement addItem;
     @FindBy(xpath = "//ul//li[1]//div[@class = \"product-container\"]")
     private WebElement firstProduct;
+    @FindBy(xpath = "//span[@class=\"continue btn btn-default button exclusive-medium\"]//span[1]")
+    private WebElement continueButton;
+    @FindBy(xpath = "//div[@class='shopping_cart']/a[1]")
+    private WebElement hoverCart;
+    @FindBy(xpath = "//span[@class='price cart_block_total ajax_block_cart_total']")
+    private WebElement getTotal;
 
     public ShopPage(WebDriver driver) {
         super(driver);
@@ -41,10 +47,26 @@ public class ShopPage extends BasePage {
         return list;
     }
 
-    public ShopPage addItemToCart() {
+    public ShopPage hoverShopItem() {
         Actions builder = new Actions(driver);
         builder.moveToElement(firstProduct).perform();
+        return this;
+    }
+
+    public ShopPage addItemToCart() {
         addItem.click();
         return this;
+    }
+    public ShopPage clickcontinueButton() {
+        continueButton.click();
+        return this;
+    }
+    public ShopPage hoverOnCart() {
+        Actions builder = new Actions(driver);
+        builder.moveToElement(hoverCart).perform();
+        return this;
+    }
+    public String getTotalPrice() {
+        return getTotal.getText();
     }
 }
